@@ -27,9 +27,9 @@ public class BfhlServiceImplTest {
         ResponseDto response = bfhlService.processData(request);
 
         assertTrue(response.isIsSuccess());
-        assertEquals("john_doe_17091999", response.getUserId());
-        assertEquals("john@xyz.com", response.getEmail());
-        assertEquals("ABCD123", response.getRollNumber());
+        assertEquals("krishna_thakur_06112005", response.getUserId());
+        assertEquals("krishnathakur230625@acropolis.in", response.getEmail());
+        assertEquals("0827CI231069", response.getRollNumber());
 
         assertEquals(Arrays.asList("1"), response.getOddNumbers());
         assertEquals(Arrays.asList("334", "4"), response.getEvenNumbers());

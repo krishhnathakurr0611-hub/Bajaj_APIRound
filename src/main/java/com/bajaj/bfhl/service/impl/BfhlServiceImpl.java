@@ -16,11 +16,10 @@ public class BfhlServiceImpl implements BfhlService {
     public ResponseDto processData(RequestDto requestDto) {
         ResponseDto response = new ResponseDto();
         
-        // Hardcoded user details as per requirement (assuming test user context or fixed)
-        // "john_doe_17091999"
-        response.setUserId("john_doe_17091999");
-        response.setEmail("john@xyz.com");
-        response.setRollNumber("ABCD123");
+        // "krishna_thakur_06112005"
+        response.setUserId("krishna_thakur_06112005");
+        response.setEmail("krishnathakur230625@acropolis.in");
+        response.setRollNumber("0827CI231069");
         
         List<String> oddNumbers = new ArrayList<>();
         List<String> evenNumbers = new ArrayList<>();

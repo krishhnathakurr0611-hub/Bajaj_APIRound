@@ -9,14 +9,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/bfhl")
 @CrossOrigin("*")
 public class BfhlController {
 
     @Autowired
     private BfhlService bfhlService;
 
-    @PostMapping
+    @PostMapping("/bfhl")
     public ResponseEntity<ResponseDto> processData(@RequestBody RequestDto requestDto) {
         try {
             ResponseDto response = bfhlService.processData(requestDto);
@@ -26,5 +25,15 @@ public class BfhlController {
             errorResponse.setIsSuccess(false);
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(errorResponse);
         }
+    }
+
+    @GetMapping("/bfhl")
+    public ResponseEntity<?> getBfhl() {
+        return ResponseEntity.ok().body("{\"operation_code\":1}");
+    }
+
+    @GetMapping("/health")
+    public ResponseEntity<String> healthCheck() {
+        return ResponseEntity.ok("API is up and running!");
     }
 }

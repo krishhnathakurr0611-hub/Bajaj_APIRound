@@ -36,4 +36,9 @@ public class BfhlController {
     public ResponseEntity<String> healthCheck() {
         return ResponseEntity.ok("API is up and running!");
     }
+
+    @GetMapping("/")
+    public ResponseEntity<String> home() {
+        return ResponseEntity.ok("Welcome to Bajaj API! Use POST /bfhl to interact with the API.");
+    }
 }
